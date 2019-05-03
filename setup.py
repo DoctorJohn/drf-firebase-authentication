@@ -15,6 +15,7 @@ setup(
 	license='MIT License',
 	description='A flexible Django Rest Framework authentication backend for Firebase Auth',
 	long_description=README,
+	long_description_content_type='text/markdown',
 	url='https://github.com/DoctorJohn/drf-firebase-authentication',
 	author='Jonathan Ehwald',
 	author_email='pypi@ehwald.info',
