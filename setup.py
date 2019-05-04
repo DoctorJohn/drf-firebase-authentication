@@ -13,7 +13,7 @@ setup(
 	packages=find_packages(),
 	include_package_data=True,
 	license='MIT License',
-	description='A flexible Django Rest Framework authentication backend for Firebase Auth',
+	description='A flexible Django Rest Framework Firebase authentication class',
 	long_description=README,
 	long_description_content_type='text/markdown',
 	url='https://github.com/DoctorJohn/drf-firebase-authentication',
