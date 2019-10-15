@@ -75,7 +75,15 @@ class BaseFirebaseAuthentication(authentication.BaseAuthentication):
 
         return (user, firebase_token)
 
-    def get_firebase_app(self):
+    def authenticate_header(self, request):
+        """
+        Returns a string that will be used as the value of the WWW-Authenticate
+        header in a HTTP 401 Unauthorized response.
+        """
+        return self.keyword
+
+    @classmethod
+    def get_firebase_app(cls):
         """
         This method must be implemented in a subclass of this class. It must
         return a valid Firebase App instance.
@@ -86,7 +94,8 @@ class BaseFirebaseAuthentication(authentication.BaseAuthentication):
         msg = 'Implement this method in a subclass.'
         raise NotImplemented(msg)
 
-    def get_django_user(self, firebase_user_record):
+    @classmethod
+    def get_django_user(cls, firebase_user_record):
         """
         Returns a django user associated with the requesting firebase user.
 
@@ -104,10 +113,3 @@ class BaseFirebaseAuthentication(authentication.BaseAuthentication):
         """
         msg = 'Implement this method in a subclass.'
         raise NotImplemented(msg)
-
-    def authenticate_header(self, request):
-        """
-        Returns a string that will be used as the value of the WWW-Authenticate
-        header in a HTTP 401 Unauthorized response.
-        """
-        return self.keyword
