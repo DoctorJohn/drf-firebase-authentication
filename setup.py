@@ -20,7 +20,7 @@ setup(
 	author='Jonathan Ehwald',
 	author_email='pypi@ehwald.info',
     install_requires=[
-		'firebase-admin>=2.14.0',
+		'firebase-admin~=2.14.0',
 		'djangorestframework>=3.1',
 		'Django>=1.11',
 	],
