@@ -92,7 +92,7 @@ class BaseFirebaseAuthentication(authentication.BaseAuthentication):
         https://firebase.google.com/docs/reference/admin/python/firebase_admin#app
         """
         msg = 'Implement this method in a subclass.'
-        raise NotImplemented(msg)
+        raise NotImplementedError(msg)
 
     @classmethod
     def get_django_user(cls, firebase_user_record):
@@ -112,4 +112,4 @@ class BaseFirebaseAuthentication(authentication.BaseAuthentication):
         https://firebase.google.com/docs/reference/admin/python/firebase_admin.auth#userrecord
         """
         msg = 'Implement this method in a subclass.'
-        raise NotImplemented(msg)
+        raise NotImplementedError(msg)
