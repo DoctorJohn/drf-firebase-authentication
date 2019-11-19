@@ -1,5 +1,8 @@
 # Django Rest Framework Firebase Authentication
 
+![PyPI](https://img.shields.io/pypi/v/drf-firebase-authentication)
+![PyPI - License](https://img.shields.io/pypi/l/drf-firebase-authentication)
+
 This package provides a base Firebase Authentication backend class for the Django rest framework. Two key methods are not implemented for more flexebility. Let's [keep it simple, stupid](https://en.wikipedia.org/wiki/KISS_principle).
 
 ## Requirements
